@@ -54,14 +54,14 @@ public:
         }
         
         if(lastInc==-1) {   //Check if array is DSC
-            for(i=0;i<n/2;++i)
+            for(i=0;i<n/2;i++)
                 swap(nums[i],nums[n-i-1]);
             return;
         }
         //Find element in the range (nums[lastInc-1] to nums[lastInc]) to the right
         int mn = nums[lastInc];
         int index = lastInc;
-        for(i=lastInc;i<n;++i) {
+        for(i=lastInc;i<n;i++) {
             if(nums[i]>nums[lastInc-1] and nums[i]<nums[index]) {
                 index = i;
             }
