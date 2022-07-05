@@ -22,7 +22,8 @@ public:
 };*/
 
 
-class Solution {   // MEMOIZATION
+
+/*class Solution {   // MEMOIZATION
 private:
      int solve(vector<int>&cost,int n,vector<int>&dp ) {
         //base case
@@ -50,7 +51,35 @@ public:
         int ans=min(solve(cost,n-1,dp),solve(cost,n-2,dp));
         return ans;
     }
+};*/
+
+
+class Solution {   // TABULATION 
+private:
+     int solve(vector<int>&cost,int n, vector<int>&dp ) {
+        //STEP2 BASE CASE ANALYSIS AND PUTTING INSIDE DP ARRAY
+       dp[0]=cost[0];
+       dp[1]=cost[1];
+         
+         // STEP3 creating for loop for rest of the array element calls
+         for(int i=2;i<=n-1;i++){
+             dp[i]=cost[i]+min(dp[i-1],dp[i-2]);
+         }
+         
+        return min(dp[n-1],dp[n-2]);
+    }
+public:
+   
+    int minCostClimbingStairs(vector<int>& cost) {
+        int n=cost.size();
+        //STEP1 CREATION OF DP ARRAY
+        vector<int>dp(n+1);
+        return solve(cost,n,dp);
+    }
 };
+
+
+
 
 
 
