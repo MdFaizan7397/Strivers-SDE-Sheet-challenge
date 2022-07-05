@@ -45,7 +45,7 @@ private:
                 mini=min(mini,1+ans);
         }
         dp[amount]=mini;
-        return mini;
+        return dp[amount];
     }
 public:
     int coinChange(vector<int>& coins, int amount) {
