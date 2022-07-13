@@ -9,7 +9,7 @@
  *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
  * };
  */
-class Solution {
+class Solution { //O(N)
 private:
     pair<int,int>diameterFast(TreeNode*root){
         //base case
