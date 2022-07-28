@@ -1,26 +1,30 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-        int lo=0;
-        int mid=0;  // Both low and mid ointer will be pointing to index 0
-        int hi=nums.size()-1; // high pointer will be pointing to last eleement of array.
+        int n=nums.size();
+        //we need 3 pointers
+        int low=0;
+        int mid=0;
+        int high=n-1;
         
-        while(mid<=hi){
-            if(nums[mid]==0){
-                swap(nums[lo],nums[mid]);
-                lo++;
-                mid++;
-            }
-            else if(nums[mid]==1){
-                mid++;
-            }
-            else if(nums[mid]==2){
-                swap(nums[mid],nums[hi]);
-                hi--;
+        while(mid<=high){
+            switch(nums[mid]){
                 
+                //when mid pointer is pointing to 0
+                case 0: swap(nums[low],nums[mid]);
+                mid++;
+                low++;
+                break;
+                
+                //when mid pointer is pointing to 1
+                case 1: mid++;
+                break;
+                
+                //when mid pointer is pointing to 2
+                case 2 : swap(nums[high],nums[mid]);
+                high--;
+                break;
             }
         }
-        
-        
     }
 };
