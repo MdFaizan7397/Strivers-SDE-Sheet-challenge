@@ -1,4 +1,6 @@
-class Solution {
+//BRUTE FORCE AAPROACH
+
+/*class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
         int n=nums.size();
@@ -12,11 +14,12 @@ public:
         return-1;
         
     }
-};
+};*/
+
 
 //OPTIMIZED APPROACH
 
-/*class Solution {
+class Solution {
 public:
     int findDuplicate(vector<int>& nums) {
         //TORTOISE METHOD  //Optimized Approach
@@ -41,4 +44,4 @@ public:
           }
         return slow;
     }
-};*/
+};
