@@ -38,6 +38,7 @@ public:
     }
 };*/
 
+//MOORES VOTING ALGORITHM
 
 class Solution {
 public:
