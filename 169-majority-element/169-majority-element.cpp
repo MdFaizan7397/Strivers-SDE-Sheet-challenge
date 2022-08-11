@@ -22,18 +22,37 @@ public:
 };*/
 
 //UNORDERED MAP
-class Solution {
+/*class Solution {
 public:
     int majorityElement(vector<int>& arr) {
         int n=arr.size()/2;
-        map < int, int > freq;
+        map < int, int > mp;
         for(int i=0; i< arr.size() ; i++){
-            freq [arr[i]]++;
+            mp[arr[i]]++;
         }
         for(int i=0; i < arr.size() ; i++){
-            if(freq [arr[i]] > n)
+            if(mp[arr[i]] > n)
                 return arr[i];
         }
         return 0;
+    }
+};*/
+
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        
+        int candidate=0,count=0;
+        for(int i=0;i<nums.size();i++){
+            if(count==0) {
+            candidate=nums[i]; count++;
+            }
+            else if(nums[i]==candidate) {
+                count+=1;
+            }
+            else count-=1;
+        }
+        return candidate;
     }
 };
