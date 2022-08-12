@@ -18,7 +18,7 @@ public:
         return mini == INT_MAX? 0 : mini;
     }
 };*/
-//OPTIMIZED APPROACH
+//OPTIMIZED APPROACH : 2 POINTER
 class Solution {
 public:
     int minSubArrayLen(int s, vector<int>& nums) {
