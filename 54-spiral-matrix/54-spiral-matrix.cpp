@@ -29,6 +29,7 @@ public:
                     v.push_back(matrix[i][left]);
                 left++;
             }
+            //DIRECTION VALUE IS UPDATED HERE
             dir=(1+dir)%4;
         }
         return v;
