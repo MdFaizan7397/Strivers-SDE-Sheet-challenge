@@ -17,11 +17,13 @@ public:
 };*/
 
 //OPTIMAL APPROACH :  HEAP: priority queue
-
+                   // for calculating minimum element use MAX HEAP
+                   // for calculating  maximum element use MIN HEAP
 /*class Solution {
 public:
     int kthSmallest(vector<vector<int>>& matrix, int k) {
-        priority_queue<int>pq; int n = matrix.size();
+        priority_queue<int>pq; //MAX HEAP BY DEFAULT of k size
+        int n = matrix.size();
         for(int i = 0; i < n; i++)
             for(int j = 0; j < n; j++){
                 pq.push(matrix[i][j]);
