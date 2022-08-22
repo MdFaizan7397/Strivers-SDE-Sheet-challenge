@@ -9,9 +9,9 @@ public:
             return false;
         }
         else if(n==m){
-            temp=s+s;
-            if(temp.find(goal)!=string ::npos){
-                return true;
+            temp=s+s; // concatenation of string1
+            if(temp.find(goal)!=string ::npos){ //finding wheather sting2 is present in str1
+                return true;                    
             }
             
         }
