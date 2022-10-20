@@ -12,15 +12,16 @@ public:
             result=result+word2[j];
             j++;
         }
-        while(i<n){
+        
+                while(i<n){
             result=result+word1[i];
             i++;
+            
         }
-        while(j<m){
+                while(j<m){
             result=result+word2[j];
             j++;
         }
         return result;
-        
     }
 };
