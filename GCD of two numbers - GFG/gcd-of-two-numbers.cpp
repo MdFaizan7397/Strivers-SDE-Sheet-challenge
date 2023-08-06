@@ -19,7 +19,7 @@ class Solution
 	        dividend=B;
 	        divisor=A;
 	    }
-	    while(remainder){
+	    while(remainder!=0){
 	        remainder=dividend%divisor;
 	        if(remainder!=0){
 	            dividend=divisor;
